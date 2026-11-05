@@ -1,0 +1,172 @@
+:root {
+    --color-principal: #2c3e50;
+    --color-secundario: #34495e;
+    --color-fondo: #f8f9fa;
+    --color-texto: #333;
+    --color-acento: #27ae60;
+    --color-whatsapp: #25D366;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    scroll-behavior: smooth;
+}
+
+.encabezado-fijo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--color-principal);
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 15px 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+main {
+    margin-top: 60px;
+    padding: 20px;
+}
+
+.seccion {
+    min-height: 40vh;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.cuadricula-cabanas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta-cabana {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.tarjeta-cabana:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-cabana img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.boton-ver {
+    background-color: var(--color-acento);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.contacto {
+    background-color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.boton-whatsapp-contacto {
+    display: inline-block;
+    background-color: var(--color-whatsapp);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.boton-flotante {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--color-whatsapp);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+/* Estilos de la ventana Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    overflow-y: auto;
+}
+
+.oculto {
+    display: none;
+}
+
+.contenido-modal {
+    background-color: white;
+    margin: 5% auto;
+    padding: 30px;
+    width: 85%;
+    max-width: 800px;
+    border-radius: 10px;
+    position: relative;
+    text-align: left;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.galeria-extra {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+.galeria-extra img {
+    height: 150px;
+    border-radius: 5px;
+}
+
+.contenedor-mapa {
+    margin-top: 20px;
+}

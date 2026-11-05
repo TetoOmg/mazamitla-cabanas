@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabañas en Mazamitla</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header class="encabezado-fijo">
+        <nav>
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#galeria">Fotos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="seccion inicio">
+            <h1>Bienvenidos a Cabañas Mazamitla</h1>
+            <p>Disfruta de la naturaleza con las mejores comodidades. Revisa nuestras opciones de hospedaje a continuación.</p>
+        </section>
+
+        <section id="galeria" class="seccion">
+            <h2>Nuestras Cabañas</h2>
+            <div class="cuadricula-cabanas">
+                <!-- Tarjetas generadas dinámicamente o escritas a mano. Aquí la estructura base. -->
+                <article class="tarjeta-cabana" onclick="abrirModal('cabana1')">
+                    <img src="https://via.placeholder.com/400x250" alt="Cabaña 1">
+                    <h3>Cabaña Bosque</h3>
+                    <p>Capacidad: 4 personas. Ideal para familias pequeñas.</p>
+                    <button class="boton-ver">Ver detalles</button>
+                </article>
+
+                <article class="tarjeta-cabana" onclick="abrirModal('cabana2')">
+                    <img src="https://via.placeholder.com/400x250" alt="Cabaña 2">
+                    <h3>Cabaña Montaña</h3>
+                    <p>Capacidad: 2 personas. Perfecta para parejas.</p>
+                    <button class="boton-ver">Ver detalles</button>
+                </article>
+                
+                <article class="tarjeta-cabana" onclick="abrirModal('cabana3')">
+                    <img src="https://via.placeholder.com/400x250" alt="Cabaña 3">
+                    <h3>Cabaña Lago</h3>
+                    <p>Capacidad: 6 personas. Espacio amplio y terraza.</p>
+                    <button class="boton-ver">Ver detalles</button>
+                </article>
+
+                <article class="tarjeta-cabana" onclick="abrirModal('cabana4')">
+                    <img src="https://via.placeholder.com/400x250" alt="Cabaña 4">
+                    <h3>Cabaña Pino</h3>
+                    <p>Capacidad: 8 personas. Diseño rústico de dos pisos.</p>
+                    <button class="boton-ver">Ver detalles</button>
+                </article>
+
+                <article class="tarjeta-cabana" onclick="abrirModal('cabana5')">
+                    <img src="https://via.placeholder.com/400x250" alt="Cabaña 5">
+                    <h3>Cabaña Vista</h3>
+                    <p>Capacidad: 10 personas. La opción más grande disponible.</p>
+                    <button class="boton-ver">Ver detalles</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion contacto">
+            <h2>Información de Contacto</h2>
+            <p><strong>Teléfono:</strong> +52 123 456 7890</p>
+            <p><strong>Correo:</strong> contacto@ejemplo.com</p>
+            <p><strong>Redes Sociales:</strong> <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+            <a href="URL_WHATSAPP_AQUI" target="_blank" class="boton-whatsapp-contacto">Contáctanos aquí (WhatsApp)</a>
+        </section>
+    </main>
+
+    <!-- Botón flotante persistente -->
+    <a href="URL_WHATSAPP_AQUI" target="_blank" class="boton-flotante">WhatsApp</a>
+
+    <!-- Ventana Modal Oculta para los detalles -->
+    <div id="modal-detalle" class="modal oculto">
+        <div class="contenido-modal">
+            <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
+            <h2 id="modal-titulo">Título de la Cabaña</h2>
+            
+            <div id="modal-galeria-extra" class="galeria-extra">
+                <!-- Las fotos se insertan con JS -->
+            </div>
+            
+            <p id="modal-descripcion" class="descripcion-detallada">Descripción completa...</p>
+            
+            <div class="contenedor-mapa">
+                <iframe id="modal-mapa" src="" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="codigo.js"></script>
+</body>
+</html>
