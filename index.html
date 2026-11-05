@@ -1,99 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cabañas en Mazamitla</title>
-    <link rel="stylesheet" href="estilos.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<!-- Pide al navegador no guardar copias viejas (el número ?v= de abajo se cambia cada vez que edites los archivos) -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Cabañas La Lagunita y La Bonita | Mazamitla, Jalisco</title>
+<meta name="description" content="Cabañas en Mazamitla para 2 hasta 22 personas, rodeadas de naturaleza y con área de fogata. Ideales para parejas, familias y grupos grandes.">
+<meta name="theme-color" content="#14342b">
+<link rel="stylesheet" href="estilos.css?v=1">
 </head>
 <body>
-    <header class="encabezado-fijo">
-        <nav>
-            <ul class="menu">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#galeria">Fotos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section id="inicio" class="seccion inicio">
-            <h1>Bienvenidos a Cabañas Mazamitla</h1>
-            <p>Disfruta de la naturaleza con las mejores comodidades. Revisa nuestras opciones de hospedaje a continuación.</p>
-        </section>
+<header class="top" id="top">
+  <a class="logo" href="#inicio">Cabañas La Lagunita y La Bonita</a>
+  <button class="burger" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <nav id="menu">
+    <a href="#nosotros">Por qué venir</a>
+    <a href="#cabanas">Cabañas</a>
+    <a href="#contacto">Contacto</a>
+    <a class="btn wa mini" data-wa="">WhatsApp</a>
+  </nav>
+</header>
 
-        <section id="galeria" class="seccion">
-            <h2>Nuestras Cabañas</h2>
-            <div class="cuadricula-cabanas">
-                <!-- Tarjetas generadas dinámicamente o escritas a mano. Aquí la estructura base. -->
-                <article class="tarjeta-cabana" onclick="abrirModal('cabana1')">
-                    <img src="https://via.placeholder.com/400x250" alt="Cabaña 1">
-                    <h3>Cabaña Bosque</h3>
-                    <p>Capacidad: 4 personas. Ideal para familias pequeñas.</p>
-                    <button class="boton-ver">Ver detalles</button>
-                </article>
-
-                <article class="tarjeta-cabana" onclick="abrirModal('cabana2')">
-                    <img src="https://via.placeholder.com/400x250" alt="Cabaña 2">
-                    <h3>Cabaña Montaña</h3>
-                    <p>Capacidad: 2 personas. Perfecta para parejas.</p>
-                    <button class="boton-ver">Ver detalles</button>
-                </article>
-                
-                <article class="tarjeta-cabana" onclick="abrirModal('cabana3')">
-                    <img src="https://via.placeholder.com/400x250" alt="Cabaña 3">
-                    <h3>Cabaña Lago</h3>
-                    <p>Capacidad: 6 personas. Espacio amplio y terraza.</p>
-                    <button class="boton-ver">Ver detalles</button>
-                </article>
-
-                <article class="tarjeta-cabana" onclick="abrirModal('cabana4')">
-                    <img src="https://via.placeholder.com/400x250" alt="Cabaña 4">
-                    <h3>Cabaña Pino</h3>
-                    <p>Capacidad: 8 personas. Diseño rústico de dos pisos.</p>
-                    <button class="boton-ver">Ver detalles</button>
-                </article>
-
-                <article class="tarjeta-cabana" onclick="abrirModal('cabana5')">
-                    <img src="https://via.placeholder.com/400x250" alt="Cabaña 5">
-                    <h3>Cabaña Vista</h3>
-                    <p>Capacidad: 10 personas. La opción más grande disponible.</p>
-                    <button class="boton-ver">Ver detalles</button>
-                </article>
-            </div>
-        </section>
-
-        <section id="contacto" class="seccion contacto">
-            <h2>Información de Contacto</h2>
-            <p><strong>Teléfono:</strong> +52 123 456 7890</p>
-            <p><strong>Correo:</strong> contacto@ejemplo.com</p>
-            <p><strong>Redes Sociales:</strong> <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
-            <a href="URL_WHATSAPP_AQUI" target="_blank" class="boton-whatsapp-contacto">Contáctanos aquí (WhatsApp)</a>
-        </section>
-    </main>
-
-    <!-- Botón flotante persistente -->
-    <a href="URL_WHATSAPP_AQUI" target="_blank" class="boton-flotante">WhatsApp</a>
-
-    <!-- Ventana Modal Oculta para los detalles -->
-    <div id="modal-detalle" class="modal oculto">
-        <div class="contenido-modal">
-            <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
-            <h2 id="modal-titulo">Título de la Cabaña</h2>
-            
-            <div id="modal-galeria-extra" class="galeria-extra">
-                <!-- Las fotos se insertan con JS -->
-            </div>
-            
-            <p id="modal-descripcion" class="descripcion-detallada">Descripción completa...</p>
-            
-            <div class="contenedor-mapa">
-                <iframe id="modal-mapa" src="" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
+<main>
+  <!-- ===== BIENVENIDA ===== -->
+  <section id="inicio" class="hero">
+    <!-- FOTOS DE PORTADA: sube tus archivos .webp a la carpeta "fotos" con estos mismos nombres (o cambia el nombre aquí) -->
+    <div class="slides">
+      <img class="on" src="fotos/portada-1.webp" alt="Cabañas rodeadas de naturaleza en Mazamitla" width="1200" height="800">
+      <img src="fotos/portada-2.webp" alt="Área de fogata de las cabañas" width="1200" height="800">
+      <img src="fotos/portada-3.webp" alt="Vista de las cabañas en Mazamitla" width="1200" height="800">
     </div>
+    <div class="hero-txt">
+      <p class="lugar">Mazamitla, Jalisco</p>
+      <h1>Bienvenidos a Cabañas La Lagunita y La Bonita</h1>
+      <p>Desconéctate, enciende la fogata y disfruta con los tuyos rodeado de naturaleza.</p>
+      <a class="btn" href="#cabanas">Ver cabañas</a>
+      <a class="btn ghost" data-wa="">Escríbenos</a>
+    </div>
+    <a class="swipe" href="#nosotros">Desliza hacia arriba para ver más<span>⌃</span></a>
+  </section>
 
-    <script src="codigo.js"></script>
+  <!-- ===== POR QUÉ VENIR ===== -->
+  <section id="nosotros" class="sec">
+    <h2>Un descanso a tu medida</h2>
+    <p class="sub">Dos familias propietarias que rentamos juntas, para que encuentres el espacio ideal para tu grupo, sea pequeño o muy grande.</p>
+    <div class="feats">
+      <div><b>👥</b>De 2 hasta 22 personas</div>
+      <div><b>🌲</b>Rodeadas de naturaleza</div>
+      <div><b>🔥</b>Áreas de fogata para convivir</div>
+      <div><b>💞</b>Ideales para parejas, familias y grupos</div>
+    </div>
+  </section>
+
+  <!-- ===== CABAÑAS (se generan desde codigo.js) ===== -->
+  <section id="cabanas" class="sec">
+    <h2>Nuestras cabañas</h2>
+    <p class="sub">Toca “Ver más” para ver más fotos y la ubicación.</p>
+    <div id="lista-cabanas"><noscript>Activa JavaScript para ver las cabañas.</noscript></div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section id="contacto" class="contacto">
+    <h2>¿Listo para tu escapada?</h2>
+    <p>Escríbenos y te ayudamos a elegir la cabaña ideal para tu grupo.</p>
+    <p><a class="btn wa" data-wa="">💬 Escríbenos por WhatsApp</a></p>
+    <p>📞 <a data-tel href="#contacto">Llamar</a></p>
+    <p><a data-airbnb href="#contacto">También puedes reservar en Airbnb</a></p>
+  </section>
+</main>
+
+<footer>© Cabañas La Lagunita y La Bonita · Mazamitla, Jalisco</footer>
+
+<a class="flot" data-wa="" aria-label="Escríbenos por WhatsApp">💬 WhatsApp</a>
+
+<script src="codigo.js?v=1"></script>
 </body>
 </html>
