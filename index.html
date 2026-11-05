@@ -10,7 +10,10 @@
 <title>Cabañas La Lagunita y La Bonita | Mazamitla, Jalisco</title>
 <meta name="description" content="Cabañas en Mazamitla para 2 hasta 22 personas, rodeadas de naturaleza y con área de fogata. Ideales para parejas, familias y grupos grandes.">
 <meta name="theme-color" content="#14342b">
-<link rel="stylesheet" href="estilos.css?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css?v=3">
 </head>
 <body>
 
@@ -49,10 +52,10 @@
     <h2>Un descanso a tu medida</h2>
     <p class="sub">Dos familias propietarias que rentamos juntas, para que encuentres el espacio ideal para tu grupo, sea pequeño o muy grande.</p>
     <div class="feats">
-      <div><b>👥</b>De 2 hasta 22 personas</div>
-      <div><b>🌲</b>Rodeadas de naturaleza</div>
-      <div><b>🔥</b>Áreas de fogata para convivir</div>
-      <div><b>💞</b>Ideales para parejas, familias y grupos</div>
+      <div><b data-i="users"></b>De 2 hasta 22 personas</div>
+      <div><b data-i="tree"></b>Rodeadas de naturaleza</div>
+      <div><b data-i="flame"></b>Áreas de fogata para convivir</div>
+      <div><b data-i="heart"></b>Ideales para parejas, familias y grupos</div>
     </div>
   </section>
 
@@ -67,16 +70,16 @@
   <section id="contacto" class="contacto">
     <h2>¿Listo para tu escapada?</h2>
     <p>Escríbenos y te ayudamos a elegir la cabaña ideal para tu grupo.</p>
-    <p><a class="btn wa" data-wa="">💬 Escríbenos por WhatsApp</a></p>
-    <p>📞 <a data-tel href="#contacto">Llamar</a></p>
+    <p><a class="btn wa" data-wa=""><span data-i="chat"></span>Escríbenos por WhatsApp</a></p>
+    <p><span data-i="phone"></span><a data-tel href="#contacto">Llamar</a></p>
     <p><a data-airbnb href="#contacto">También puedes reservar en Airbnb</a></p>
   </section>
 </main>
 
 <footer>© Cabañas La Lagunita y La Bonita · Mazamitla, Jalisco</footer>
 
-<a class="flot" data-wa="" aria-label="Escríbenos por WhatsApp">💬 WhatsApp</a>
+<div class="barra"><a class="btn" data-airbnb="">Reservar</a><a class="btn wa" data-wa=""><span data-i="chat"></span>WhatsApp</a></div>
 
-<script src="codigo.js?v=2"></script>
+<script src="codigo.js?v=3"></script>
 </body>
 </html>
