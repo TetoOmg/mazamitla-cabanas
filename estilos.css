@@ -86,3 +86,14 @@ footer{padding:20px 20px 90px;background:#0d2119;color:#b9c9c0;text-align:center
   .flot{padding:15px 24px}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* Página de cada cabaña */
+.interna main{padding-top:76px}
+.det{padding-top:20px}
+.det h1{font-size:clamp(2rem,8vw,3.2rem);color:var(--pino);margin:10px 0 18px}
+.det h2{font-size:1.5rem;margin:32px 0 12px;text-align:left}
+.volver{color:var(--pino2);font-weight:700;text-decoration:none}
+.portada-cab{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--r);background:#cfe0d4}
+.desc{max-width:680px;margin:18px 0 0;font-size:1.1rem}
+.det .tags{margin:14px 0 0}
+.det iframe{height:320px}
